@@ -15,7 +15,7 @@ defmodule ExAws.TimestreamTest do
   describe "Amazon Timestream Write actions" do
     test "#describe_endpoints" do
       op = Timestream.describe_write_endpoints()
-      assert op.data == %{}
+      assert op.data == :ok
 
       assert Enum.sort(op.headers) == describe_endpoint_headers()
     end
